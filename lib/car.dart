@@ -19,13 +19,14 @@ class Car  {
 
   @override
   String toString() {
-    // TODO: implement toString
     return '$name - $yearOfProduction';
   }
 
   void doSomething() {
     print('I am doing something...');
     this.handleEvent();
+    final total = this._calculatorTotal([1,2,3,4]);
+    print('total = $total');
   }
   // method with named arguments?
   void sayHello(String personName) {
@@ -33,5 +34,10 @@ class Car  {
   }
 
   Function handleEvent;
+
+  // Function private
+  int _calculatorTotal(List<int> list) {
+    return list.reduce((a, b) => a + b);
+  }
 
 }
