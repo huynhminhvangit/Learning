@@ -36,6 +36,15 @@ void main() {
   var filtered = cars.where((element) => element.name.contains('Honda')).toList();
   // how to delete?
   cars = cars.where((element) => !element.name.contains('Honda')).toList();
+
+  // Now we try with final and conts(constant)
+  // final x = 10; // Can't set value for final and const(int, string, bool)
+  // x = 20;
+
+  final List<int> someNumbers = [1,2,3,5];
+  someNumbers.add(7);
+  
+
   runApp(Center(
       child: Text(
     filtered.toString(),
